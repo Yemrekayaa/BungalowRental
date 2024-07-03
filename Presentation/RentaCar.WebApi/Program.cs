@@ -10,7 +10,7 @@ using RentaCar.Application.Interfaces.CarInterfaces;
 using RentaCar.Persistence.Context;
 using RentaCar.Persistence.Repositories;
 using RentaCar.Persistence.Repositories.CarRepositories;
-
+using RentaCar.Application.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -56,6 +56,8 @@ builder.Services.AddScoped<GetContactByIdQueryHandler>();
 builder.Services.AddScoped<CreateContactCommandHandler>();
 builder.Services.AddScoped<RemoveContactCommandHandler>();
 builder.Services.AddScoped<UpdateContactCommandHandler>();
+
+builder.Services.AddApplicationService(builder.Configuration);
 
 // Add services to the container.
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
