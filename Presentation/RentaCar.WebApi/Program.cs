@@ -2,6 +2,7 @@ using RentaCar.Application.Features.CQRS.Handlers.AboutHandlers;
 using RentaCar.Application.Features.CQRS.Handlers.BannerHandlers;
 using RentaCar.Application.Features.CQRS.Handlers.BrandHandlers;
 using RentaCar.Application.Features.CQRS.Handlers.CarHandlers;
+using RentaCar.Application.Features.CQRS.Handlers.CategoryHandlers;
 using RentaCar.Application.Features.CQRS.Queries.CarQueries;
 using RentaCar.Application.Interfaces;
 using RentaCar.Application.Interfaces.CarInterfaces;
@@ -42,6 +43,12 @@ builder.Services.AddScoped<CreateCarCommandHandler>();
 builder.Services.AddScoped<RemoveCarCommandHandler>();
 builder.Services.AddScoped<UpdateCarCommandHandler>();
 builder.Services.AddScoped<GetCarWithBrandQueryHandler>();
+
+builder.Services.AddScoped<GetCategoryQueryHandler>();
+builder.Services.AddScoped<GetCategoryByIdQueryHandler>();
+builder.Services.AddScoped<CreateCategoryCommandHandler>();
+builder.Services.AddScoped<RemoveCategoryCommandHandler>();
+builder.Services.AddScoped<UpdateCategoryCommandHandler>();
 
 // Add services to the container.
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
