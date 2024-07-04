@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RentaCar.WebApi", "Presenta
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RentaCar.Application", "Core\RentaCar.Application\RentaCar.Application.csproj", "{76FD05B1-6515-45AD-8969-3B1A8BDF7D03}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Frontends", "Frontends", "{19200983-238C-42CE-A733-FD5A94A717F5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
