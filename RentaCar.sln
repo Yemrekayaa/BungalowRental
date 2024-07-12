@@ -21,6 +21,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Frontends", "Frontends", "{
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RentaCar.WebUI", "Frontends\RentaCar.WebUI\RentaCar.WebUI.csproj", "{BA818184-4A58-4FBF-AEDB-5EB6FEC2FBC1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RentaCar.Dto", "Frontends\RentaCar.Dto\RentaCar.Dto.csproj", "{967FEB47-51BC-426C-B697-665B2BF79290}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,6 +49,10 @@ Global
 		{BA818184-4A58-4FBF-AEDB-5EB6FEC2FBC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BA818184-4A58-4FBF-AEDB-5EB6FEC2FBC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BA818184-4A58-4FBF-AEDB-5EB6FEC2FBC1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{967FEB47-51BC-426C-B697-665B2BF79290}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{967FEB47-51BC-426C-B697-665B2BF79290}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{967FEB47-51BC-426C-B697-665B2BF79290}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{967FEB47-51BC-426C-B697-665B2BF79290}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -57,5 +63,6 @@ Global
 		{7C4B877F-EF44-4003-AE49-CC4B61A74903} = {A50FDBC8-F0B2-4B8F-B8D4-A92A444FE85B}
 		{76FD05B1-6515-45AD-8969-3B1A8BDF7D03} = {4A7D36A1-D26E-4CC9-ADDA-526154CE627C}
 		{BA818184-4A58-4FBF-AEDB-5EB6FEC2FBC1} = {19200983-238C-42CE-A733-FD5A94A717F5}
+		{967FEB47-51BC-426C-B697-665B2BF79290} = {19200983-238C-42CE-A733-FD5A94A717F5}
 	EndGlobalSection
 EndGlobal

@@ -1,0 +1,60 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            // Use IntelliSense to find out which attributes exist for C# debugging
+            // Use hover for the description of the existing attributes
+            // For further information visit https://github.com/dotnet/vscode-csharp/blob/main/debugger-launchjson.md.
+            "name": ".NET Core Launch (Backend)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "buildbackend",
+            // If you have changed target frameworks, make sure to update the program path.
+            "program": "${workspaceFolder}/Presentation/RentaCar.WebApi/bin/Debug/net8.0/RentaCar.WebApi.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/Presentation/RentaCar.WebApi",
+            "stopAtEntry": false,
+            // Enable launching a web browser when ASP.NET Core starts. For more information: https://aka.ms/VSCode-CS-LaunchJson-WebBrowser
+            "serverReadyAction": {
+                "action": "openExternally",
+                "pattern": "\\bNow listening on:\\s+(https?://\\S+)"
+            },
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development"
+            },
+            "sourceFileMap": {
+                "/Views": "${workspaceFolder}/Views"
+            }
+        },
+        {
+            "name": ".NET Core Launch (Frontend)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "buildfrontend",
+            "program": "${workspaceFolder}/Frontends/RentaCar.WebUI/bin/Debug/net8.0/RentaCar.WebUI.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/Frontends/RentaCar.WebUI",
+            "stopAtEntry": false,
+            // Enable launching a web browser when ASP.NET Core starts. For more information: https://aka.ms/VSCode-CS-LaunchJson-WebBrowser
+            "serverReadyAction": {
+                "action": "openExternally",
+                "pattern": "\\bNow listening on:\\s+(https?://\\S+)"
+            },
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development"
+            },
+            "sourceFileMap": {
+                "/Views": "${workspaceFolder}/Views"
+            }
+          }
+    ], "compounds": [
+        {
+          "name": "Frontend & Backend",
+          "configurations": [
+            ".NET Core Launch (Frontend)",
+            ".NET Core Launch (Backend)"
+          ],
+          "stopAll": true
+        }
+      ]
+}
