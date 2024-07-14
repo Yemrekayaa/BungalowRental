@@ -1,6 +1,9 @@
-namespace RentaCar.Domain.Entities
+
+using MediatR;
+
+namespace RentaCar.Application.Features.Mediator.Commands.TestimonialCommands
 {
-    public class Testimonial
+    public class UpdateTestimonialCommand: IRequest
     {
         public int Id { get; set; } 
         public string Name { get; set; }

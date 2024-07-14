@@ -1,6 +1,6 @@
-namespace RentaCar.Domain.Entities
+namespace RentaCar.Application.Features.Mediator.Results.TestimonialResults
 {
-    public class Testimonial
+    public class GetTestimonialQueryResult
     {
         public int Id { get; set; } 
         public string Name { get; set; }
