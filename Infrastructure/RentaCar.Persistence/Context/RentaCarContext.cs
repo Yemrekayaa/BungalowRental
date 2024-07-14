@@ -1,7 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using RentaCar.Domain.Entities;
 
@@ -9,12 +5,16 @@ namespace RentaCar.Persistence.Context
 {
     public class RentaCarContext: DbContext
     {
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
 
             optionsBuilder.UseNpgsql("Server=localhost;Port=5432;Database=RentaCar;User Id=postgres;Password=1234;");
+            AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
             base.OnConfiguring(optionsBuilder);
         }
+
+        
 
         public DbSet<About> Abouts { get; set; }
         public DbSet<Banner> Banners { get; set; }
