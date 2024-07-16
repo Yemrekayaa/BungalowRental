@@ -11,6 +11,8 @@ using RentaCar.Persistence.Context;
 using RentaCar.Persistence.Repositories;
 using RentaCar.Persistence.Repositories.CarRepositories;
 using RentaCar.Application.Services;
+using RentaCar.Application.Interfaces.BlogInterfaces;
+using RentaCar.Persistence.Repositories.BlogRepositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -18,7 +20,7 @@ builder.Services.AddScoped<RentaCarContext>();
 
 builder.Services.AddScoped(typeof(IRepository<>),typeof(Repository<>));
 builder.Services.AddScoped<ICarRepository,CarRepository>();
-
+builder.Services.AddScoped<IBlogRepository,BlogRepository>();
 
 builder.Services.AddScoped<GetAboutQueryHandler>();
 builder.Services.AddScoped<GetAboutByIdQueryHandler>();

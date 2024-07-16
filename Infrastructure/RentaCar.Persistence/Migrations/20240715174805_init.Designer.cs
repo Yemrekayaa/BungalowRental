@@ -12,8 +12,8 @@ using RentaCar.Persistence.Context;
 namespace RentaCar.Persistence.Migrations
 {
     [DbContext(typeof(RentaCarContext))]
-    [Migration("20240715161206_mig_add_blog_author")]
-    partial class mig_add_blog_author
+    [Migration("20240715174805_init")]
+    partial class init
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -112,14 +112,7 @@ namespace RentaCar.Persistence.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("AuthorId")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<int>("AuthorId1")
-                        .HasColumnType("integer");
-
-                    b.Property<int?>("BlogId")
+                    b.Property<int>("AuthorId")
                         .HasColumnType("integer");
 
                     b.Property<int>("CategoryId")
@@ -138,9 +131,7 @@ namespace RentaCar.Persistence.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("AuthorId1");
-
-                    b.HasIndex("BlogId");
+                    b.HasIndex("AuthorId");
 
                     b.HasIndex("CategoryId");
 
@@ -502,13 +493,9 @@ namespace RentaCar.Persistence.Migrations
                 {
                     b.HasOne("RentaCar.Domain.Entities.Author", "Author")
                         .WithMany()
-                        .HasForeignKey("AuthorId1")
+                        .HasForeignKey("AuthorId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.HasOne("RentaCar.Domain.Entities.Blog", null)
-                        .WithMany("Blogs")
-                        .HasForeignKey("BlogId");
 
                     b.HasOne("RentaCar.Domain.Entities.Category", "Category")
                         .WithMany("Blogs")
@@ -583,11 +570,6 @@ namespace RentaCar.Persistence.Migrations
                     b.Navigation("Car");
 
                     b.Navigation("Pricing");
-                });
-
-            modelBuilder.Entity("RentaCar.Domain.Entities.Blog", b =>
-                {
-                    b.Navigation("Blogs");
                 });
 
             modelBuilder.Entity("RentaCar.Domain.Entities.Car", b =>
