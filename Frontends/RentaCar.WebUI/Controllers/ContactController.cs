@@ -18,6 +18,8 @@ namespace RentaCar.WebUI.Controllers
         [HttpGet]
         public IActionResult Index()
         {
+            ViewBag.v1 = "Contact";
+            ViewBag.v2 = "Contact Us";
             return View();
         }
 

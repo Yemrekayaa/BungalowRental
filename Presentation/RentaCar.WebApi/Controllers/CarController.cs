@@ -17,7 +17,7 @@ namespace RentaCar.WebApi.Controllers
         private readonly GetCarWithBrandQueryHandler _getCarWithBrandQueryHandler;
         private readonly GetLast5CarWithBrandQueryHandler _getLast5CarWithBrandQueryHandler;
 
-        public CarController(GetCarByIdQueryHandler getCarByIdQueryHandler, GetCarQueryHandler getCarQueryHandler, CreateCarCommandHandler createCarCommandHandler, UpdateCarCommandHandler updateCarCommandHandler, RemoveCarCommandHandler removeCarCommandHandler, GetCarWithBrandQueryHandler getCarWithBrandQueryHandler,GetLast5CarWithBrandQueryHandler getLast5CarWithBrandQueryHandler)
+        public CarController(GetCarByIdQueryHandler getCarByIdQueryHandler, GetCarQueryHandler getCarQueryHandler, CreateCarCommandHandler createCarCommandHandler, UpdateCarCommandHandler updateCarCommandHandler, RemoveCarCommandHandler removeCarCommandHandler, GetCarWithBrandQueryHandler getCarWithBrandQueryHandler, GetLast5CarWithBrandQueryHandler getLast5CarWithBrandQueryHandler)
         {
             _getCarByIdQueryHandler = getCarByIdQueryHandler;
             _getCarQueryHandler = getCarQueryHandler;

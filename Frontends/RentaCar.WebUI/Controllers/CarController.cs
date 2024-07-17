@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
-using RentaCar.Dto.CarDtos;
+using RentaCar.Dto.CarPricingDtos;
 
 namespace RentaCar.WebUI.Controllers
 {
@@ -16,11 +16,13 @@ namespace RentaCar.WebUI.Controllers
 
         public async Task<IActionResult> Index()
         {
+            ViewBag.v1 = "Cars";
+            ViewBag.v2 = "Choose Your Car";
             var client = _httpClientFactory.CreateClient();
-            var response = await client.GetAsync("http://localhost:5113/api/Car/GetCarWithBrand");
+            var response = await client.GetAsync("http://localhost:5113/api/CarPricing/CarPricingWithCar");
             if (response.IsSuccessStatusCode){
                 var jsonData = await response.Content.ReadAsStringAsync();
-                var values = JsonConvert.DeserializeObject<List<ResultCarWithBrandDto>>(jsonData);
+                var values = JsonConvert.DeserializeObject<List<ResultCarPricingWithCarDto>>(jsonData);
                 return View(values);
             }
             return View();
