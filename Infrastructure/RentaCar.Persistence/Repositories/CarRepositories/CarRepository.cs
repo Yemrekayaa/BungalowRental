@@ -1,4 +1,3 @@
-using System.Dynamic;
 using Microsoft.EntityFrameworkCore;
 using RentaCar.Application.Interfaces.CarInterfaces;
 using RentaCar.Domain.Entities;

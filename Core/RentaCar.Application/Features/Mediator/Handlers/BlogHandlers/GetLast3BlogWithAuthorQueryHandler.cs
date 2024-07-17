@@ -1,9 +1,7 @@
 using MediatR;
 using RentaCar.Application.Features.Mediator.Queries.BlogQueries;
 using RentaCar.Application.Features.Mediator.Results.BlogResults;
-using RentaCar.Application.Interfaces;
 using RentaCar.Application.Interfaces.BlogInterfaces;
-using RentaCar.Domain.Entities;
 
 namespace RentaCar.Application.Features.Mediator.Handlers.BlogHandlers
 {
@@ -19,7 +17,8 @@ namespace RentaCar.Application.Features.Mediator.Handlers.BlogHandlers
         public async Task<List<GetLast3BlogWithAuthorQueryResult>> Handle(GetLast3BlogWithAuthorQuery request, CancellationToken cancellationToken)
         {
             var values = await _repository.GetLast3BlogWithAuthor();
-            return values.Select(x => new GetLast3BlogWithAuthorQueryResult{
+            return values.Select(x => new GetLast3BlogWithAuthorQueryResult
+            {
                 Id = x.Id,
                 AuthorId = x.AuthorId,
                 AuthorName = x.Author.Name,

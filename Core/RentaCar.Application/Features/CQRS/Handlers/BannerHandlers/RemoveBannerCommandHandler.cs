@@ -1,7 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using RentaCar.Application.Features.CQRS.Commands.BannerCommands;
 using RentaCar.Application.Interfaces;
 using RentaCar.Domain.Entities;

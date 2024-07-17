@@ -1,7 +1,5 @@
 using RentaCar.Application.Features.CQRS.Results.CarResults;
-using RentaCar.Application.Interfaces;
 using RentaCar.Application.Interfaces.CarInterfaces;
-using RentaCar.Domain.Entities;
 
 namespace RentaCar.Application.Features.CQRS.Queries.CarQueries
 {

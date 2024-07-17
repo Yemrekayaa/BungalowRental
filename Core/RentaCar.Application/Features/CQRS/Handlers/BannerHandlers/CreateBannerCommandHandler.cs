@@ -1,7 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using RentaCar.Application.Features.CQRS.Commands.BannerCommands;
 using RentaCar.Application.Interfaces;
 using RentaCar.Domain.Entities;
@@ -17,8 +13,10 @@ namespace RentaCar.Application.Features.CQRS.Handlers.BannerHandlers
             _repository = repository;
         }
 
-        public async Task Handle(CreateBannerCommand command){
-            await _repository.CreateAsync(new Banner{
+        public async Task Handle(CreateBannerCommand command)
+        {
+            await _repository.CreateAsync(new Banner
+            {
                 Title = command.Title,
                 Description = command.Description,
                 VideoDescription = command.VideoDescription,

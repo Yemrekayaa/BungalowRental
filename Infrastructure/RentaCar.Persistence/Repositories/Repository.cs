@@ -1,7 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using RentaCar.Application.Interfaces;
 using RentaCar.Persistence.Context;
@@ -44,7 +40,7 @@ namespace RentaCar.Persistence.Repositories
 
         public async Task UpdateAsync(T entity)
         {
-           _dbSet.Update(entity);
+            _dbSet.Update(entity);
             await _context.SaveChangesAsync();
         }
     }

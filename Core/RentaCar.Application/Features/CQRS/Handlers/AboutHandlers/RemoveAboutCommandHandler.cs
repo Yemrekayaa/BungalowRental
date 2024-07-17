@@ -1,7 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using RentaCar.Application.Features.CQRS.Commands.AboutCommands;
 using RentaCar.Application.Interfaces;
 using RentaCar.Domain.Entities;
@@ -17,7 +13,8 @@ namespace RentaCar.Application.Features.CQRS.Handlers.AboutHandlers
             _repository = repository;
         }
 
-        public async Task Handle(RemoveAboutCommand command){
+        public async Task Handle(RemoveAboutCommand command)
+        {
             var value = await _repository.GetByIdAsync(command.Id);
             await _repository.RemoveAsync(value);
         }

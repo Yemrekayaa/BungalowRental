@@ -1,9 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.Intrinsics.X86;
-using System.Threading.Tasks;
-
 namespace RentaCar.Domain.Entities
 {
     public class Car

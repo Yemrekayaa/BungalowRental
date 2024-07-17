@@ -1,10 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using RentaCar.Application.Interfaces;
-using RentaCar.Domain.Entities;
-
 namespace RentaCar.Application.Features.CQRS.Commands.BannerCommands
 {
     public class CreateBannerCommand

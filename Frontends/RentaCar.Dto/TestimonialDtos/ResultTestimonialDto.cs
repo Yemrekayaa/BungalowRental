@@ -1,8 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
 namespace RentaCar.Dto.TestimonialDtos
 {
     public class ResultTestimonialDto
@@ -13,5 +8,5 @@ namespace RentaCar.Dto.TestimonialDtos
         public string Comment { get; set; }
         public string ImageUrl { get; set; }
     }
-    
+
 }

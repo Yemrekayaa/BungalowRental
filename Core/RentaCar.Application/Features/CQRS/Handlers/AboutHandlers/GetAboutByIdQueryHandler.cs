@@ -1,7 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using RentaCar.Application.Features.CQRS.Queries.AboutQueries;
 using RentaCar.Application.Features.CQRS.Results.AboutResults;
 using RentaCar.Application.Interfaces;
@@ -18,9 +14,11 @@ namespace RentaCar.Application.Features.CQRS.Handlers.AboutHandlers
             _repository = repository;
         }
 
-        public async Task<GetAboutByIdQueryResult> Handle(GetAboutByIdQuery query){
+        public async Task<GetAboutByIdQueryResult> Handle(GetAboutByIdQuery query)
+        {
             var value = await _repository.GetByIdAsync(query.Id);
-            return new GetAboutByIdQueryResult{
+            return new GetAboutByIdQueryResult
+            {
                 Id = value.Id,
                 Description = value.Description,
                 Title = value.Title,
