@@ -5,5 +5,6 @@ namespace RentaCar.Application.Interfaces.BlogInterfaces
     public interface IBlogRepository
     {
         Task<List<Blog>> GetLast3BlogWithAuthor();
+        Task<List<Blog>> GetBlogWithAuthor();
     }
 }

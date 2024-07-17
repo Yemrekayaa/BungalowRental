@@ -14,6 +14,12 @@ namespace RentaCar.Persistence.Repositories.BlogRepositories
             _context = context;
         }
 
+        public async Task<List<Blog>> GetBlogWithAuthor()
+        {
+            var values = await _context.Blogs.Include(x => x.Author).Include(x => x.Category).ToListAsync();
+            return values;
+        }
+
         public async Task<List<Blog>> GetLast3BlogWithAuthor()
         {
             var values = await _context.Blogs.Include(x => x.Author).OrderByDescending(x => x.Id).Take(3).ToListAsync();

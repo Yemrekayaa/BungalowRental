@@ -17,37 +17,49 @@ namespace RentaCar.WebApi.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> ListBlog(){
+        public async Task<IActionResult> ListBlog()
+        {
             var values = await _mediator.Send(new GetBlogQuery());
             return Ok(values);
         }
 
         [HttpGet("{id}")]
-        public async Task<IActionResult> GetBlog(int id){
+        public async Task<IActionResult> GetBlog(int id)
+        {
             var value = await _mediator.Send(new GetBlogByIdQuery(id));
             return Ok(value);
         }
 
         [HttpPost]
-        public async Task<IActionResult> CreateBlog(CreateBlogCommand command){
+        public async Task<IActionResult> CreateBlog(CreateBlogCommand command)
+        {
             await _mediator.Send(command);
             return Ok("Created");
         }
 
         [HttpPut]
-        public async Task<IActionResult> UpdateBlog(UpdateBlogCommand command){
+        public async Task<IActionResult> UpdateBlog(UpdateBlogCommand command)
+        {
             await _mediator.Send(command);
             return Ok("Updated");
         }
 
         [HttpDelete]
-        public async Task<IActionResult> RemoveBlog(RemoveBlogCommand command){
+        public async Task<IActionResult> RemoveBlog(RemoveBlogCommand command)
+        {
             await _mediator.Send(command);
             return Ok("Removed");
         }
         [HttpGet("GetLast3BlogWithAuthor")]
-        public async Task<IActionResult> GetLast3BlogWithAuthor(){
+        public async Task<IActionResult> GetLast3BlogWithAuthor()
+        {
             var values = await _mediator.Send(new GetLast3BlogWithAuthorQuery());
+            return Ok(values);
+        }
+        [HttpGet("GetBlogWithAuthor")]
+        public async Task<IActionResult> GetBlogWithAuthor()
+        {
+            var values = await _mediator.Send(new GetBlogWithAuthorQuery());
             return Ok(values);
         }
     }
