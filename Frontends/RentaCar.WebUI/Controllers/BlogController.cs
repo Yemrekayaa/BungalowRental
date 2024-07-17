@@ -29,5 +29,22 @@ namespace RentaCar.WebUI.Controllers
             return View();
         }
 
+        [HttpGet("BlogDetail")]
+        public async Task<IActionResult> BlogDetail()
+        {
+            ViewBag.v1 = "Blog";
+            ViewBag.v2 = "Read Our Blog";
+            return View();
+        }
+
+        [HttpGet("BlogDetail/{id}")]
+        public async Task<IActionResult> BlogDetail(int id)
+        {
+            ViewBag.v1 = "Blog";
+            ViewBag.v2 = "Read Our Blog";
+            return View();
+        }
+
+
     }
 }

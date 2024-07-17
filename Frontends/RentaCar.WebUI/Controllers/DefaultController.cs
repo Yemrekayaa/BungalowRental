@@ -3,10 +3,9 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace RentaCar.WebUI.Controllers
 {
-    [Route("[controller]")]
     public class DefaultController : Controller
     {
- 
+
         public IActionResult Index()
         {
             return View();
