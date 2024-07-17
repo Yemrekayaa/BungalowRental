@@ -3,7 +3,7 @@ using RentaCar.Domain.Entities;
 
 namespace RentaCar.Persistence.Context
 {
-    public class RentaCarContext: DbContext
+    public class RentaCarContext : DbContext
     {
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -14,7 +14,7 @@ namespace RentaCar.Persistence.Context
             base.OnConfiguring(optionsBuilder);
         }
 
-        
+
 
         public DbSet<About> Abouts { get; set; }
         public DbSet<Banner> Banners { get; set; }
@@ -34,5 +34,6 @@ namespace RentaCar.Persistence.Context
         public DbSet<Testimonial> Testimonials { get; set; }
         public DbSet<Blog> Blogs { get; set; }
         public DbSet<Author> Authors { get; set; }
+        public DbSet<TagCloud> TagClouds { get; set; }
     }
 }
